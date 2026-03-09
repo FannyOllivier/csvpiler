@@ -2,6 +2,7 @@
 # csvpiler
 
 <!-- badges: start -->
+![GitHub release](https://img.shields.io/github/v/release/FannyOllivier/csvpiler)
 <!-- badges: end -->
 
 The goal of csvpiler is to pile up csv files sharing the same columns.
