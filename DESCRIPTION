@@ -12,3 +12,5 @@ Imports:
     cli,
     dplyr,
     utils
+URL: https://github.com/FannyOllivier/csvpiler
+BugReports: https://github.com/FannyOllivier/csvpiler/issues
