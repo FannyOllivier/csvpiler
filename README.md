@@ -20,14 +20,14 @@ devtools::install_github("FannyOllivier/csvpiler")
 ```
 
 ## Examples
-Create a single CSV file by combining all CSV files from a folder named "FichiersDonnees". No extra column added. The resulting file is saved in the same folder and a success message is printed in the console.
+1/ Create a single CSV file by combining all CSV files from a folder (dossier). No extra column added. The resulting file is saved in the same folder and a success message is printed in the console.
 
 ``` r
 library(csvpiler)
 ## pile_csv_min(dossier="C:\\Users\\FichiersDonnees", sortie="global.csv")
 ```
 
-Create a single CSV file by combining all CSV files from a folder named "FichiersDonnees". Two extra columns added: ID and source. The first six characters of each file name are used as IDs (1st column). The file name is added in the source column (last column). The resulting file is saved in the same folder and a success message is printed in the console. 
+2/ Create a single CSV file by combining all CSV files from a folder (dossier). Two extra columns added: ID and source. The first x characters of each file name are used as IDs (1st column). The file name is added in the source column (last column). The resulting file is saved in the same folder and a success message is printed in the console. 
 
 ``` r
 library(csvpiler)
