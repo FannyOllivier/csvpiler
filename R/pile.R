@@ -1,5 +1,5 @@
 
-#' Pile up csv files with the same columns
+#' pile_csv: Pile up csv files with the same columns - adds 2 columns : ID (1st column), source (last column, name of the source file)
 #'
 #' @param dossier A folder containing the csv files to pile up, e.g., "C:\\Users\\FichierDonnees".
 #' @param sortie A file name for the resulting csv file.
@@ -33,7 +33,7 @@ pile_csv<- function(dossier, x, sortie="resultat.csv") {
 }
 
 
-#' pile_csv_min: Pile up csv files with the same columns : minimal function, no column added
+#' pile_csv_min: Pile up csv files with the same columns - minimal function, no column added
 #'
 #' @param dossier A folder containing the csv files to pile up, e.g., "C:\\Users\\FichierDonnees".
 #' @param sortie A file name for the resulting csv file.

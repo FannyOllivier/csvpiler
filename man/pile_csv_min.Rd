@@ -2,7 +2,7 @@
 % Please edit documentation in R/pile.R
 \name{pile_csv_min}
 \alias{pile_csv_min}
-\title{pile_csv_min: Pile up csv files with the same columns : minimal function, no column added}
+\title{pile_csv_min: Pile up csv files with the same columns - minimal function, no column added}
 \usage{
 pile_csv_min(dossier, sortie = "resultat.csv")
 }
@@ -15,5 +15,5 @@ pile_csv_min(dossier, sortie = "resultat.csv")
 A csv file with all the rows of the csv files from the folder.
 }
 \description{
-pile_csv_min: Pile up csv files with the same columns : minimal function, no column added
+pile_csv_min: Pile up csv files with the same columns - minimal function, no column added
 }

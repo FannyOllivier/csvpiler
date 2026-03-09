@@ -2,7 +2,7 @@
 % Please edit documentation in R/pile.R
 \name{pile_csv}
 \alias{pile_csv}
-\title{Pile up csv files with the same columns}
+\title{pile_csv: Pile up csv files with the same columns - adds 2 columns : ID (1st column), source (last column, name of the source file)}
 \usage{
 pile_csv(dossier, x, sortie = "resultat.csv")
 }
@@ -17,5 +17,5 @@ pile_csv(dossier, x, sortie = "resultat.csv")
 A csv file with all the rows of the csv files from the folder.
 }
 \description{
-Pile up csv files with the same columns
+pile_csv: Pile up csv files with the same columns - adds 2 columns : ID (1st column), source (last column, name of the source file)
 }
