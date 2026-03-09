@@ -1,6 +1,6 @@
 Package: csvpiler
 Title: Pile Up CSV Files
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: 
     person("Fanny", "Ollivier", , "fannyollivier1@gmail.com", role = c("aut", "cre"))
 Description: A system to pile up .csv files, add an ID column if needed, and (to be added) count occurences in the .csv files provided as data. 
