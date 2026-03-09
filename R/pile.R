@@ -6,7 +6,6 @@
 #' @param x A number : number of characters from the csv file names which will be used to form the ID.
 #' @returns A csv file with all the rows of the csv files from the folder.
 #' @export
-
 pile_csv<- function(dossier, x, sortie="resultat.csv") {
   fichiers<-list.files(path=dossier, pattern="\\.csv$", full.names = TRUE)
   if (length(fichiers)==0) stop("No csv file found in this folder")
@@ -28,6 +27,37 @@ pile_csv<- function(dossier, x, sortie="resultat.csv") {
   tout<-dplyr::relocate(tout, "ID", .before=1) #met ID en premier
 
   utils::write.csv(tout, file=file.path(dossier, sortie), row.names = FALSE)
+  message("File successfully created: ", file.path(dossier, sortie))
   invisible(tout)
-  cli::cli_alert_success("Success! Your complete csv file is in the folder.")
+
+}
+
+
+#' pile_csv_min: Pile up csv files with the same columns : minimal function, no column added
+#'
+#' @param dossier A folder containing the csv files to pile up, e.g., "C:\\Users\\FichierDonnees".
+#' @param sortie A file name for the resulting csv file.
+#' @returns A csv file with all the rows of the csv files from the folder.
+#' @export
+pile_csv_min <- function(dossier, sortie = "resultat.csv") {
+
+  fichiers <- list.files(path = dossier, pattern = "\\.csv$", full.names = TRUE)
+
+  if (length(fichiers) == 0) {
+    stop("No csv file found in this folder")
+  }
+
+
+
+  liste_df <- lapply(fichiers, function(f) {
+    utils::read.csv(f, header = TRUE)
+  })
+
+  tout <- dplyr::bind_rows(liste_df)
+
+  utils::write.csv(tout, file = file.path(dossier, sortie), row.names = FALSE)
+
+  message("File successfully created: ", file.path(dossier, sortie))
+
+  invisible(tout)
 }
